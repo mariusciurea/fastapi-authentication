@@ -29,6 +29,12 @@ class Settings(BaseSettings):
             "password": ph.hash("Changeme_123")
         }
     }
+    M2M_CLIENTS: dict = {
+        "adk-agent-orchestrator": {
+            "client_id": "adk-agent-orchestrator",
+            "client_secret": ph.hash("AgentSecret_123"),
+        }
+    }
 
 
 def get_settings():
