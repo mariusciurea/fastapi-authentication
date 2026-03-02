@@ -18,6 +18,7 @@ class CommandExecution(BaseModel):
     @classmethod
     def validate_command(cls, value: str):
         """Allow only commands that start with show"""
+
         if not value.lower().startswith("show"):
             raise ValueError("Only show commands are allowed")
 
